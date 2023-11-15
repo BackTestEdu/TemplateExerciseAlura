@@ -23,4 +23,4 @@ Outras Tecnologias e Ferramentas e coisas relacionadas a web, que eu achar neces
 
 ## Contato
 
-[Email] gmv.eduardo@proton.me
+[Email](mailto:gmv.eduardo@proton.me)
