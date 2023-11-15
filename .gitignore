@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+
+# Arquivos de compilação e logs
+dist/
+build/
+*.log
+
+# Dependências específicas do gerenciador de pacotes (npm, yarn)
+package-lock.json
+yarn.lock
+
+# Ambiente específico (por exemplo, .env)
+.env
+
+# Arquivos de configuração de IDE
+.vscode/
+.idea/
+
+# Arquivos de build e configuração de projetos
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# Cache e diretórios temporários
+.cache/
+.tmp/
+temp/
+
+# Arquivos de backup
+*.bak
+*.backup

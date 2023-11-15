@@ -1,11 +1,3 @@
-body {
-    font-family: "Jura", sans-serif;
-    background: linear-gradient(180deg, #154580 0%, #041833 100%) no-repeat;
-    color: white;
-    height: 100vh;
-    width: 100vw;
-    background-image: norepeat;
-}
 pre{
 
     background-color: #f4f4f4;

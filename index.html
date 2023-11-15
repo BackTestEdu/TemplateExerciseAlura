@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="assets/styles/default.css">
+    <link rel="stylesheet" href="assets/scripts/respostas.js">
+    <link rel="stylesheet" href="assets/styles/questions.css" >
     <script src="js/respostas.js" defer></script>
     <title>Atividade 1</title>
 </head>
 
 <body>
-    <header class="cabecalho">CONTEÚDO CABEÇALHO</header>
-    <aside class="lateral">CONTEÚDO MENU LATERAL</aside>
-    <main class="principal">CONTEÚDO PRINCIPAL</main>
-
+    <div class="container">
+        <h1>Enunciado:</h1>
+        <iframe id="container-teste" src="pagina_interna.html" frameborder="0"></iframe>
+    </div>
     <section class="container-resposta">
 
         <h1>Os estilos seram aplicado na pagina baseado na resposta OBS: mesmo quebrando (duh! é uma arternativa errada)
@@ -25,52 +26,18 @@
         <div class="item-resposta">
             <button onclick="resposta('A')" type="button">A</button>
             <pre>
-              <code> 
-body {
-display: grid;
-grid-template-areas: 
-"header header"
-"main aside";
-}
-
-.cabecalho {     
-grid-area: header;
-}
-
-.lateral { 
-grid-area: aside;
-}
-
-.principal { 
-grid-area: main;
-}
-              </code>
-            </pre>
-
+                <code>
+                  print("Hello, World!")
+                </code>
+              </pre>
         </div>
 
         <div class="item-resposta">
             <button onclick="resposta('B')" type="button">B</button>
             <pre>
-                <code> 
-body {
-display: grid;
-grid-template-areas: 
-"header header"
-"main aside";
-}
-
-.cabecalho { 
-grid-area: cabecalho;
-}
-
-.lateral { 
-grid-area: lateral;
-}
-
-.principal { 
-grid-area: principal;
-}
+                <code>
+                  
+                  print("Hello, World!"
                 </code>
               </pre>
         </div>
@@ -78,27 +45,9 @@ grid-area: principal;
         <div class="item-resposta">
             <button onclick="resposta('C')" type="button">C</button>
             <pre>
-                <code> 
-body {
-grid-template-areas: 
-"aside aside"
-"main header";
-}
-                
-.cabecalho {     
-display: grid;
-grid-area: header;
-}
-
-.lateral { 
-display: grid;
-grid-area: aside;
-}
-                
-.principal { 
-display: grid;
- grid-area: main;
-}
+                <code>
+                    print("Hello, ", end="")
+                     print("World!")
                 </code>
               </pre>
         </div>
@@ -108,26 +57,10 @@ display: grid;
             <button onclick="resposta('D')" type="button">D</button>
             <pre>
                 <code>
-body {
-display: grid;
-grid-template-columns: 
-"cabecalho cabecalho"
-"principal lateral";
-}
-
-.cabecalho {     
-grid-area: header;
-}
-
-.lateral { 
-grid-area: aside;
-}
-
-.principal { 
-grid-area: main;
-}
+                  print "Hello, World!"
                 </code>
               </pre>
+
         </div>
     </section>
 
