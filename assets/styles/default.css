@@ -3,6 +3,6 @@ body {
     background: linear-gradient(180deg, #154580 0%, #041833 100%) no-repeat;
     color: white;
     height: 100vh;
-    width: 100vw;
-    background-image: norepeat;
+    width: 100%;
 }
+

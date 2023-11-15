@@ -1,64 +1,29 @@
-function resposta(resposta) {
-    let descricao = document.querySelector('.descricao');
-    let buttons = document.querySelectorAll('button');
-    const acertou = "Alternativa correta!";
-    btnReset();
+function carregarPaginaInterna() {
+    const iframec = document.querySelector("#container-teste");
 
-    switch (resposta) {
-        case "A":
-            buttons[0].style.color = 'lightgreen';
-            document.body.style.display = 'grid';
-            document.body.style.gridTemplateAreas = '"header header" "main aside"';
-            document.querySelector('.cabecalho').style.gridArea = 'header';
-            document.querySelector('.lateral').style.gridArea = 'aside';
-            document.querySelector('.principal').style.gridArea = 'main';
-            document.querySelector('.descricao').style.color = 'green';
-            descricao.innerHTML = acertou;
+    // Faz uma solicitação GET para a página interna
+    fetch('pagina-interna.html')
+        .then(response => response.text())
+        .then(data => {
+            // Define o conteúdo do iframe com a resposta
+            iframec.contentDocument.open();
+            iframec.contentDocument.write(data);
+            iframec.contentDocument.close();
 
-            break;
-        case "B":
-            buttons[1].style.color = 'red';
-            document.body.style.display = 'grid';
-            document.body.style.gridTemplateAreas = '"header header" "main aside"';
-            document.querySelector('.cabecalho').style.gridArea = 'cabecalho';
-            document.querySelector('.lateral').style.gridArea = 'lateral';
-            document.querySelector('.principal').style.gridArea = 'principal';
-            document.querySelector('.descricao').style.color = 'red';
-            descricao.innerHTML = "Pense mais um pouco! O valor passado para as classes deve sempre ser correspondente aos valores passados na propriedade grid-template-areas.";
-            break;
-        case "C":
-            buttons[2].style.color = 'red';
-            document.body.style.display = 'grid';
-            document.body.style.gridTemplateAreas = '"aside aside" "main header"';
-            document.querySelector('.cabecalho').style.display = 'grid';
-            document.querySelector('.cabecalho').style.gridArea = 'header';
-            document.querySelector('.lateral').style.display = 'grid';
-            document.querySelector('.lateral').style.gridArea = 'aside';
-            document.querySelector('.lateral').style.display = 'grid';
-            document.querySelector('.principal').style.gridArea = 'main';
-            document.querySelector('.descricao').style.color = 'red';
-            descricao.innerHTML = "Tente outra vez! O display grid deve ser aplicado na tag pai dos itens a serem organizados, e não em cada um deles. ";
-            break;
-        case "D":
-            buttons[3].style.color = 'red';
-            document.body.style.display = 'grid';
-            document.body.style.gridTemplateAreas = '"cabecalho cabecalho" "principal lateral"';
-            document.querySelector('.cabecalho').style.gridArea = 'header';
-            document.querySelector('.lateral').style.gridArea = 'aside';
-            document.querySelector('.principal').style.gridArea = 'main';
-            document.querySelector('.descricao').style.color = 'red';
-            descricao.innerHTML = "Pense mais um pouco! A propriedade grid-template-columns é utilizada para criar colunas, e não uma grade de linhas e colunas. ";
-            break;
+            // Adicione aqui qualquer manipulação adicional do DOM ou estilos
+            const estiloElement = iframec.contentDocument.createElement('style');
+            estiloElement.innerHTML = `
+                body {
+                    background-color: lightgreen;
+                    color: darkgreen;
+                }
+                /* Adicione outros estilos conforme necessário */
+            `;
 
-        default:
-            break;
-    }
-}
-
-function btnReset() {
-    const buttons = document.querySelectorAll('button');
-
-    for (let i = 0; i < buttons.length && i < 4; i++) {
-        buttons[i].style.color = 'white';
-    }
+            // Adiciona o elemento de estilo ao cabeçalho da página interna
+            iframec.contentDocument.head.appendChild(estiloElement);
+            // Navegue de volta para a página principal
+            //window.location.href = 'index.html';
+        })
+        .catch(error => console.error('Erro ao carregar a página interna:', error));
 }

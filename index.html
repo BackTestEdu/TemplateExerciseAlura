@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/default.css">
     <link rel="stylesheet" href="assets/styles/questions.css" >
+    <script src="assets/scripts/respostas.js" ></script>
 
-    <script src="assets/scripts/respostas.js" defer></script>
     <title>Atividade 1</title>
 </head>
 
 <body>
-    <div class="container">
+    
+    <div class="container-code">
         <h1>Enunciado:</h1>
-        <iframe id="container-teste" src="assets/pages/pagina-interna.html" frameborder="0"></iframe>
+        <iframe id="container-teste" src="pagina-interna.html" frameborder="0"></iframe>
     </div>
     <section class="container-resposta">
 
@@ -25,7 +26,7 @@
         <h1 class="descricao"></h1>
         </h1>
         <div class="item-resposta">
-            <button onclick="resposta('A')" type="button">A</button>
+            <button onclick="carregarPaginaInterna()" type="button">A</button>
             <pre>
                 <code>
 print("Hello, World!")
