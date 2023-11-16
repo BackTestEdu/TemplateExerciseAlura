@@ -39,7 +39,7 @@ function debug(answer) {
         `;
         case "B":
             buttons[1].style.color = 'red';
-            description.innerHTML = "Think a bit more! The values passed to the classes should always correspond to the values passed in the grid-template-areas property.";
+            description.innerHTML = "Python with syntax error!";
             return `
             code {
                 color:#f00;
@@ -47,7 +47,7 @@ function debug(answer) {
         `;
         case "C":
             buttons[2].style.color = 'red';
-            description.innerHTML = "Try again! The grid display should be applied to the parent tag of the items to be organized, not to each of them.";
+            description.innerHTML = "Python with variable not defined!";
             return `
             code {
                 color:#d00;
@@ -55,7 +55,7 @@ function debug(answer) {
         `;
         case "D":
             buttons[3].style.color = 'red';
-            description.innerHTML = "Think a bit more! The grid-template-columns property is used to create columns, not a grid of rows and columns.";
+            description.innerHTML = "Python without parentheses!";
             return `
             code {
                 color:#a00;
