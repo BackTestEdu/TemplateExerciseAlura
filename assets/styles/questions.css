@@ -23,12 +23,11 @@
  code {
      font-family: Consolas, "courier new";
      color: crimson;
-     /* background-color: #f1f1f1; */
      padding: 10px;
      font-size: 105%;
  }
 
- .container-resposta {
+ .container-answer {
      margin-top: .3rem;
      display: flex;
      justify-content: center;
@@ -38,7 +37,7 @@
      gap: 10px;
  }
 
- .item-resposta {
+ .item-answer {
      display: flex;
      flex-direction: column;
      gap: 0.5em;
