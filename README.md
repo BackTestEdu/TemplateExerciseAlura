@@ -1,26 +1,26 @@
-# TemplateExerciseAlura - Web Template Skills for Testing and Learning 
+# Template Exercise Alura - Web Template Skills for Testing and Learning 
 
-Este é um template desenvolvido para testar exercícios e aprimorar habilidades web durante os cursos da [Alura](https://www.alura.com.br/). Utiliza diversas tecnologias e ferramentas comuns no desenvolvimento web.
+This is a template developed to test exercises and improve web skills during courses at [Alura](https://www.alura.com.br/). It uses various technologies and tools common in web development.
 
-## Objetivo
+## Objective
 
-O objetivo deste projeto é fornecer uma estrutura básica para responder aos exercícios propostos nos cursos da Alura, permitindo a prática e aplicação dos conhecimentos adquiridos
+The goal of this project is to provide a basic structure to respond to exercises proposed in Alura courses, allowing for the practice and application of acquired knowledge.
 
-## Como Usar
+## How to Use
 
-1. Clone este repositório: `git clone [URL do Repositório]`
-2. Abra o arquivo `index.html` no seu navegador ou utilize um servidor local.
-3. Desenvolva e teste seus exercícios dentro da estrutura fornecida.
+1. Clone this repository: `git clone [Repository URL]`
+2. Open the `index.html` file in your browser or use a local server.
+3. Develop and test your exercises within the provided structure.
 4. ...
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - **HTML**
 - **CSS**
 - **JavaScript**
 
-Outras Tecnologias e Ferramentas e coisas relacionadas a web, que eu achar necessário, ou seja poderá ser adicionado SCSS ou até TypeScript importante é progressão de tecnologias até possivelmente chegar em um template realmente util para a necessidade
+Other technologies, tools, and web-related things that I find necessary may be added, such as SCSS or even TypeScript. The important thing is the progression of technologies until possibly reaching a template that is truly useful for the need.
 
-## Contato
+## Contact
 
 [Email](mailto:gmv.eduardo@proton.me)
