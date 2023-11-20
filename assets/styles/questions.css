@@ -13,18 +13,22 @@
  }
 
  pre {
-
+    display: flex;
+    flex-direction: column;
      background-color: #f4f4f4;
      border-radius: 4px;
      border: 1px solid #ddd;
      padding: .8rem;
+     
  }
 
- code {
+ code, xmp {
      font-family: Consolas, "courier new";
      color: crimson;
-     padding: 10px;
      font-size: 105%;
+     text-align: center;
+     margin: 0;
+     padding: 0px;
  }
 
  .container-answer {
