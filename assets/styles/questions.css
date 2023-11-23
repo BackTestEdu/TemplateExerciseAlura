@@ -7,9 +7,11 @@
  }
 
  iframe {
-     width: 96%;
+     width: auto;
      padding-left: 2%;
      padding-right: 2%;
+     min-height: 10vh;
+     height: 100%;
  }
 
  pre {
