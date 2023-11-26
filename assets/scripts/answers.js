@@ -11,7 +11,7 @@ function loadInternalPage(answer) {
             iframe.contentDocument.close();
 
             // Load answers from the JSON file
-            fetch('path/to/answers.json')
+            fetch('assets/json/answers.json')
                 .then(response => response.json())
                 .then(answers => {
                     const htmlCode = debug(answer, answers);
