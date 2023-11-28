@@ -90,12 +90,11 @@ function loadInternalPage(answer) {
             // Load answers from the JSON file
             // Reajust answer towards the code
 
-            fetch('/json/answers.json')
+            fetch('assets/json/answers.json')
                 .then(response => response.json())
                 .then(answers => {
                     const htmlCode = debug(answer, answers);
-                    // Restante do seu código...
-
+                   
                     const styleElement = iframe.contentDocument.createElement('style');
                     styleElement.innerHTML = htmlCode;
 
