@@ -11,12 +11,10 @@ function loadInternalPage(answer) {
             iframe.contentDocument.close();
 
             // Load alternatives from the JSON file
-            // Reajust answer towards the code
-
             fetch('assets/json/alternatives.json')
                 .then(response => response.json())
                 .then(alternatives => {
-                    const htmlCode = debug(answer, alternatives);
+                    const htmlCode = markCorrect(answer, alternatives);
                    
                     const styleElement = iframe.contentDocument.createElement('style');
                     styleElement.innerHTML = htmlCode;
@@ -29,21 +27,21 @@ function loadInternalPage(answer) {
         .catch(error => console.error('Error loading internal page:', error));
 }
 
-function debug(answer, alternatives) {
+function markCorrect(answer, alternatives) {
     let description = document.querySelector('.description');
     let buttons = document.querySelectorAll('button');
     resetButtons();
 
     // Check if the answer exists in the JSON file
     if (alternatives[answer]) {
-        const answerData = alternatives[answer];
-        if(answerData.description == "Correct answer!"){
+        const userAnswer = alternatives[answer];
+        if(userAnswer.isCorrect){
             buttons[answer.charCodeAt(0) - 65].style.color = '#0f0';
         } else {
             buttons[answer.charCodeAt(0) - 65].style.color = 'red';
         }
-        description.innerHTML = answerData.description;
-        return answerData.style;
+        description.innerHTML = userAnswer.description;
+        return userAnswer.style;
     } else {
         // Handle the case where the answer is not found
         console.error('Answer not found:', answer);

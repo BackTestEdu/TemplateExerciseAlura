@@ -1,19 +1,23 @@
 {
     "A": {
         "style": "code { color:#0f0; }",
-        "description": "Correct answer!"
+        "description": "Correct answer!",
+        "isCorrect": true
     },
     "B": {
         "style": "code { color:#f00; }",
-        "description": "Python with syntax error!"
+        "description": "Python with syntax error!",
+        "isCorrect": false
     },
     "C": {
         "style": "code { color:#d00; }",
-        "description": "Python with variable not defined!"
+        "description": "Python with variable not defined!",
+        "isCorrect": false
     },
     "D": {
         "style": "code { color:#a00; }",
-        "description": "Python without parentheses!"
+        "description": "Python without parentheses!",
+        "isCorrect": false
     }
 }
   
