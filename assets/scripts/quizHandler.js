@@ -37,15 +37,12 @@ function debug(answer, alternatives) {
     // Check if the answer exists in the JSON file
     if (alternatives[answer]) {
         const answerData = alternatives[answer];
-        if(answerData.description === "Correct"){
-        console.log(answer.charCodeAt());
-        
+        if(answerData.description == "Correct answer!"){
+            buttons[answer.charCodeAt(0) - 65].style.color = '#0f0';
+        } else {
+            buttons[answer.charCodeAt(0) - 65].style.color = 'red';
         }
-        console.log(answer.charCodeAt());
-        buttons[answer.charCodeAt(0) - 65].style.color = 'red'; // Adjust index based on the ASCII value of 'A'
         description.innerHTML = answerData.description;
-        
-        
         return answerData.style;
     } else {
         // Handle the case where the answer is not found
